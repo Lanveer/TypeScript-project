@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es6",
+    "rootDir": "app",
+    "outDir": "dist",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "declaration": true
+  },
+  "include": [
+    "app/**/*.ts"
+  ]
+}
+
+//module和moduleResolution表示这是一个 Node.js 项目，使用 CommonJS 模块机制
+//target 指定将代码编译到 ES6，如果目标执行系统可能有 Node.js v0.x 的版本，可设置编译到 ES5
+//rootDir 和 outDir 指定源码输入目录和编译后的代码输出目录
+//sourceMa 指定编译时生成对应的 SourceMap 文件，这样在调试程序时能快速知道所对应的 TypeScript 源码位置
+//noImplicit 开头的几个选项指定一些更严格的检查
+

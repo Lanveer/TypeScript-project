@@ -1,0 +1,42 @@
+
+ts相对于js来说的一些优势，也可以说是一些长处
+
+1.基于静态类型，用 TypeScript 编辑代码有更高的预测性，更易纠错。
+
+2.由于模块，命名空间和强大的面向对象编程支持，使构建大型复杂应用程序的代码库更加容易
+
+3.TypeScript在编译为JavaScript的过程中，在它到达运行时间前可以捕获所有类型的错误，并中断它们的执行。
+
+4.Angular 2 框架就是用 TypeScript 编写的，同时推荐开发人员在项目中也使用这种语言。
+
+新增加了对类的支持
+
+
+class Menu {
+  // Our properties:
+  // By default they are public, but can also be private or protected.
+  items: Array<string>;  // The items in the menu, an array of strings.
+  pages: number;         // How many pages will the menu be, a number.
+
+  // A straightforward constructor.
+  constructor(item_list: Array<string>, total_pages: number) {
+    // The this keyword is mandatory.
+    this.items = item_list;
+    this.pages = total_pages;
+  }
+
+  // Methods
+  list(): void {
+    console.log("Our menu for today:");
+    for(var i=0; i<this.items.length; i++) {
+      console.log(this.items[i]);
+    }
+  }
+
+}
+
+// Create a new instance of the Menu class.
+var sundayMenu = new Menu(["pancakes","waffles","orange juice"], 1);
+
+// Call the list method.
+sundayMenu.list();
